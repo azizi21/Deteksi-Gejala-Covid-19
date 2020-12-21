@@ -1,0 +1,62 @@
+import os
+
+print("+---------------------------------------------------+")
+print("|\tSelamat Datang di Aplikasi Sistem Pakar\t    |")
+print("|\t\t  Deteksi Covid-19 \t\t    |")
+print("+---------------------------------------------------+")
+nama = input("Nama\t: ")
+pilihan = input("Hallo"+nama+",\nApakah anda ingin melakukan Diagnosa ? (y/n)")
+
+os.system('cls')
+
+while pilihan == "y" :
+    print("\nApakah anda merasakan gejala berikut ini ?")
+    print("1. Demam")
+    print("2. Batuk Kering")
+    print("3. Kelelahan")
+    diag1 = input("Jawab (y/n) : ")
+
+    if diag1 == "y" :
+        print("\nApakah anda juga merasakan gejala berikut ini ? : ")
+        print("1. nyeri tenggorokan")
+        print("2. hilangnya indera perasa atau penciuman")
+        print("3. sakit kepala")
+        diag2 = input("Jawab (y/n) : ")
+
+        if diag2 == "y" :
+            print("\nHi, "+nama+" hasil awal diagnosa kamu adalah :")
+            print("Gejala Covid-19, segera ke Dokter")
+        elif diag2 == "n" :
+            print("\nApakah anda juga merasakan gejala berikut ini ? : ")
+            print("1. Kesulitan bernapas atau sesak napas")
+            print("2. Nyeri dada atau rasa tertekan pada dada")
+            print("3. Hilangnya kemampuan berbicara atau bergerak")
+            diag3 = input("Jawab (y/n) : ")
+
+            if diag3 =="y" :
+                print("\nHi, "+nama+" hasil awal diagnosa kamu adalah :")
+                print("Gejala Covid-19, segera ke Dokter")
+            elif diag3 == "n" :
+                print("\nHi, "+nama+" sepertinya itu hanya penyakit biasa pada umumnya")
+            else :
+                 print("\nHi, "+nama+" sepertinya anda aman dari gejala Covid-19")
+        else :
+            print("\nHi, "+nama+" sepertinya anda aman dari gejala Covid-19")
+    elif diag1 == "n" :
+        print("\nHi, "+nama+" sepetinya anda hanya kurang istirahat")
+    else :
+        print("\nHi, "+nama+" sepertinya anda aman dari gejala Covid-19")
+
+    print("\n+--------------------------------------------------+")
+    pilihan = input("Hallo" +nama+", \nApakah anda ingin melakukan Diagnosa lagi ? (y/n)")
+
+    if pilihan == "y" :
+        os.system('cls')
+        print("+---------------------------------------------------+")
+        print("|\tSelamat Datang di Aplikasi Sistem Pakar\t    |")
+        print("|\t\t  Deteksi Covid-19 \t\t    |")
+        print("+---------------------------------------------------+")
+    else :
+        print("+-------------------- Terima Kasih --------------------------+")
+
+                 
